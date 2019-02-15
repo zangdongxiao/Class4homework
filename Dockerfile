@@ -5,3 +5,5 @@ RUN apt-get update
 RUN apt-get install -y python
 
 RUN apt-get install -y python3-pip
+
+CMD ["python3", "my_csv_parser.py"]
