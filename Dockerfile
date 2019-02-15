@@ -1,9 +1,6 @@
-FROM ubuntu:16.04
+FROM python:3
 MAINTAINER Dongxiao Zang <zangdongxiao@gmial.com>
 
 RUN apt-get update
-RUN apt-get install -y python
-
-RUN apt-get install -y python3-pip
-
-CMD ["python3", "my_csv_parser.py"]
+COPY . /
+CMD ["python3", "./my_csv_parser.py"]
